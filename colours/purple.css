@@ -1,0 +1,40 @@
+body {
+    background:rgb(32,32,32);
+    color:white;
+}
+@keyframes boldText {
+    0% {box-shadow: 0 0 5px #eb34d0};
+}
+b {
+    color:rgb(205, 102, 225);
+    box-shadow: 0 0 5px magenta;
+}
+input,select {
+    background:#b23ea8;
+    color: white;
+}
+::placeholder {
+    color:purple;
+}
+::file-selector-button {
+    background:rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0.5);
+}
+a {
+    color:rgb(200, 55, 200);
+}
+@keyframes hoveranim {
+    0% {box-shadow: 0 0 0px rgb(183, 42, 211);}
+    100% {box-shadow: 0 0 10px rgb(183, 42, 211);}
+}
+@keyframes hoveranim2 {
+    0% {box-shadow: 0 0 0px gold;}
+    100% {box-shadow: 0 0 10px magenta;}
+}
+@keyframes hoveranim3 {
+    0% {box-shadow: 0 0 0px maroon;}
+    100% {box-shadow: 0 0 10px red;}
+}
+:not(.diamond, .golden)::selection {
+    color: #a457f1;
+}

@@ -1,0 +1,41 @@
+body {
+    background:rgb(32,32,32);
+    color:white;
+}
+@keyframes boldText {
+    0% {box-shadow: 0 0 5px white};
+}
+:not(.diamond, .golden)::selection {
+    color: grey;
+}
+b {
+    color:white;
+    box-shadow: 0 0 5px grey;
+}
+input,select {
+    background:#363031;
+    color: white;
+}
+::placeholder {
+    color:white;
+}
+::file-selector-button {
+    background:rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.5);
+    color:white;
+}
+a {
+    color:#edebeb;
+}
+@keyframes hoveranim {
+    0% {box-shadow: 0 0 0px lightgrey;}
+    100% {box-shadow: 0 0 10px white;}
+}
+@keyframes hoveranim2 {
+    0% {box-shadow: 0 0 0px grey;}
+    100% {box-shadow: 0 0 10px white;}
+}
+@keyframes hoveranim3 {
+    0% {box-shadow: 0 0 0px mediumaquamarine;}
+    100% {box-shadow: 0 0 10px grey;}
+}
