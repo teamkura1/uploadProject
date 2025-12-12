@@ -1,4 +1,5 @@
 <?php
+// Developer tools
 header("Cache-Control: no-store");
 include "config.php";
 if ($_COOKIE['devTool']!=$devToolString) {
@@ -7,7 +8,7 @@ if ($_COOKIE['devTool']!=$devToolString) {
 }
 $fname = urldecode($_GET['filename']);
 if ($_GET['action']=="delete") {
-    $connect->execute_query("DELETE FROM `files` WHERE `name`=?",[$fname]); //yes i dont even trust myself lol
+    $connect->execute_query("DELETE FROM `files` WHERE `name`=?",[$fname]); //yes i dont even trust admins/devs to not sql inject lol
     $connect->execute_query("DELETE FROM `filesizecache` WHERE `name`=?",[$fname]);
         $connect->execute_query("INSERT INTO `logs` (`action`,`type`,`account`) VALUES(CONCAT('Deleted file ',?),1,?)",[$fname,$_COOKIE['user']]);
     header("Location: uploadui.php");

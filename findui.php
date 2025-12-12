@@ -1,3 +1,4 @@
+<!-- File viewer UI -->
 <style>
     img,video,iframe,audio {
         max-width:100%;
@@ -6,7 +7,7 @@
     }
 
 </style>
-<a href='uploadui.php' >Back</a><br>
+<a href='uploadui.php'>Back</a><br>
 <?php
 try {
 include "settings.php";
@@ -15,7 +16,7 @@ $getData = $connect->execute_query("SELECT `mtype`,`time`,`tag`,`goldenFile` FRO
 if ($getData->num_rows == 0) {
     header("Location: uploadui.php?error=notfound");
 }
-$getSize = $connect->execute_query("SELECT `size` FROM `filesizecache` WHERE `name`= ?",[explode(".",$_GET['filename'])[0]]);
+$getSize = $connect->execute_query("SELECT `size` FROM `filesizecache` WHERE `name`= ?",[explode(".",$_GET['filename'])[0]]); // this is done to reduce server load, instead of calculating the size of files every time the file is viewed it calculates once and uses that forever
 
 $size = $getSize->fetch_row()[0];
 if ($getSize->num_rows==0) {
@@ -38,7 +39,7 @@ if ($size>=1000) {
     $size/=1000;
     $sizeUnit = "GB";
 }
-$formated1 = explode(":",str_replace("-","</b>/<b>",$data["time"]));
+$formated1 = explode(":",str_replace("-","</b>/<b>",$data["time"])); //waiter, waiter! more stupid time formatting
 $formated = str_replace(" ","</b> <b>","<b>".$formated1[0]."</b>:<b>".$formated1[1]."</b>");
 if ($data["tag"]) {
     $tag = htmlspecialchars($data["tag"]);

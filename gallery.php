@@ -1,4 +1,4 @@
-
+<!-- Gallery UI
 <style>
     img {
         max-width: 5% !important;

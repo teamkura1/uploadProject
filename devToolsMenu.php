@@ -1,4 +1,5 @@
 <?php
+// UI for developer tools
 include "config.php";
 if ($_COOKIE['devTool']!=$devToolString) {
    header("Location: uploadui.php?error=no.");

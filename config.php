@@ -1,4 +1,5 @@
 <?php
+// Configuration
 $server = "yourserveradress"; // the adress of your mysql server (e.g. localhost if mysql was at localhost:3306)
 $username = "yourmysqluser"; // the name of the mysql user (must have SELECT, INSERT, UPDATE and DELETE privileges on the database)
 $password = "yourmysqluser'spassword"; // the password of the user specified in $username

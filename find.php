@@ -1,4 +1,5 @@
 <?php
+// file handler
 header("Access-Control-Allow-Origin: *");
 header("Accept-Ranges: bytes");
 header("X-Content-Type-Options: nosniff");
@@ -17,5 +18,5 @@ if ($_GET['download']) {
 header("Content-Disposition: attachment; filename={$_GET['filename']}");
 }
 header("Content-Type: {$data[1]}");
-echo $data[0];
+echo $data[0]; // no im really not bothered to fuck with byte ranges
 ?>

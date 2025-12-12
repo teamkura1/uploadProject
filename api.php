@@ -1,4 +1,5 @@
 <?php
+// Heavily WIP API, should be finished by 1.3.5
 header("Access-Control-Allow-Origin: *");
 include "config.php";
 if (isset($_GET['stats'])) {
