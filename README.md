@@ -10,3 +10,5 @@ Done! It's really that simple.
 - Tags
 - Security (No SQL and XSS injections, uploaded files cant run php code)
 - Skins (formerly colour schemes)
+- Responsive (ish) design
+- API (heavily work in progress)
