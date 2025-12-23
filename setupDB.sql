@@ -9,7 +9,6 @@ CREATE TABLE `accounts` (
 CREATE TABLE `files` (
   `id` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `name` tinytext NOT NULL,
-  `fileBlob` longblob NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `mtype` tinytext NOT NULL,
   `tag` tinytext,
@@ -18,13 +17,6 @@ CREATE TABLE `files` (
 CREATE TABLE `filesizecache` (
   `name` tinytext NOT NULL,
   `size` int UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-CREATE TABLE `logs` (
-  `id` int UNSIGNED NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `action` text NOT NULL,
-  `type` tinyint NOT NULL DEFAULT '0',
-  `account` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE `sends` (
   `id` int NOT NULL,
@@ -37,9 +29,6 @@ ALTER TABLE `files`
   ADD KEY `tagIndex` (`tag`(60));
 ALTER TABLE `filesizecache`
   ADD UNIQUE KEY `name` (`name`(60));
-ALTER TABLE `logs`
-  ADD KEY `logIdIndex` (`id`),
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE `sends`
   ADD KEY `sendsIdIndex` (`id`),
   MODIFY `id` int NOT NULL AUTO_INCREMENT;

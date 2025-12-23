@@ -1,6 +1,5 @@
 <?php
-// UI for developer tools
-include "config.php";
+include "lib.php";
 if ($_COOKIE['devTool']!=$devToolString) {
    header("Location: uploadui.php?error=no.");
    die();
@@ -9,7 +8,8 @@ echo "<a href='uploadui.php' >Back</a><br>";
 include "settings.php";
 $name = urldecode($_GET['file']);
 echo "<b>{$name}</b> what would you like to do with this file?<br><a href='devTool.php?filename={$name}&action=delete'>Delete</a><br><a href='devTool.php?filename={$name}&action=setGolden'>Set ";
-   switch ($connect->execute_query("SELECT `goldenFile` FROM `files` WHERE `name`=?",[$name])->fetch_row()[0]) {
+_log("Querying golden file");   
+switch ($connect->execute_query("SELECT `goldenFile` FROM `files` WHERE `name`=?",[$name])->fetch_row()[0]) {
       case 2:
          echo "Normal";
          break;

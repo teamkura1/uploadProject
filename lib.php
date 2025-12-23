@@ -1,5 +1,14 @@
 <?php
 include "config.php";
+$libExists = true;
+function _log($str) {
+    file_put_contents("logs\\".date("Y")."-".date("M")."-".date("j").".txt",date("g").":".date("i").":".date("s").date("A")." ".$_SERVER['PHP_SELF'].": ".$str."\n",FILE_APPEND|LOCK_EX);
+}
+_log("Checking if server is closed");
+if ($connect->query("SELECT `value` FROM `specialconfig` WHERE `name`='isClosed'")->fetch_row()[0]==1&&$noRedirect!=true) {
+    header("Location: uploadui.php");
+    die();
+}
 function displayList($data) {
     $n = $data->num_rows;
     $localN = $n;
@@ -30,4 +39,5 @@ if ($_COOKIE['devTool']==$devToolString) {
     die();
 }
 }
+
 ?>

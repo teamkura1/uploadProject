@@ -15,6 +15,9 @@ fieldset {
 ::-webkit-scrollbar {
     display: none;
 }
+option:checked {
+    display: none;
+}
 * {
     font-family: inter;
     text-shadow:0 0 5px;

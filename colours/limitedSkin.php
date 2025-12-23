@@ -1,6 +1,7 @@
 <?php
 header("Content-Type: text/css");
-include "../config.php";
+include "../lib.php";
+_log("Checking if user has christmas skin, and has chosen to use it");
 if ($connect->execute_query("SELECT `christmasSkinOwned` FROM `accounts` WHERE `id`=?",[$_COOKIE['user']])->fetch_row()[0]==1 && $_COOKIE['colourscheme']=='christmas') {
     echo "@keyframes christmasText {
     0% {color: red;}
